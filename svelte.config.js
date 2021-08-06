@@ -1,7 +1,9 @@
 /** @type {import('@sveltejs/kit').Config} */
 
-import adapter from '@sveltejs/adapter-node'
+// import adapter from '@sveltejs/adapter-node'
 // import adapter from '@sveltejs/adapter-static'
+import vercel from '@sveltejs/adapter-vercel';
+
 
 const config = {
 	kit: {
@@ -27,11 +29,14 @@ const config = {
 		*
 		*/
 
-		adapter: adapter({
-			out: 'build',
-			precompress: false,
-			env: {}
-		})
+		// adapter: adapter({
+		// 	out: 'build',
+		// 	precompress: false,
+		// 	env: {}
+		// })
+
+		// vercel adapter
+		adapter: vercel()
 
 		// 
 		/*
